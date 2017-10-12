@@ -590,7 +590,7 @@ class Aggregate implements InternallyMappable
 
         $foreignKeys = $this->getForeignKeyAttributes();
 
-        return $foreignKeys + $attributes;
+        return $attributes + $foreignKeys;
     }
 
     /**
@@ -1206,7 +1206,7 @@ class Aggregate implements InternallyMappable
 
     /**
      * Return wrapped entity
-     * 
+     *
      * @return InternallyMappable
      */
     public function getWrappedEntity()
